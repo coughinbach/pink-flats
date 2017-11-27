@@ -7,7 +7,7 @@ class CreateBookings < ActiveRecord::Migration[5.1]
       t.date :start_date
       t.date :end_date
       t.integer :guests
-      t.string :status, default: "pending"
+      t.string :status
 
       t.timestamps
     end
