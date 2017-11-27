@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
+gem 'faker'
 
 group :development, :test do
   gem 'pry-byebug'
