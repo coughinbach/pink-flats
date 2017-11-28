@@ -1,1 +1,15 @@
-<p>dhzaufkezfgh<p>
+<div class="container">
+  <h1 class="text-center"><%= @flat.address %></h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <ol class="list-unstyled">
+        <div class="text-center">
+          <p><%= @flat.description %></p>
+        </div>
+      </ol>
+    </div>
+  </div>
+</div>
+<div><%= link_to "Back to list", flats_path, class: "btn btn-primary" %></div>
+<div><%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %></div>
+<div><%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %></div>
