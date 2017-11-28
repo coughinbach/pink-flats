@@ -5,19 +5,27 @@
     <div class="col-xs-10 col-xs-offset-1">
 
       <h1>Available rooms</h1>
+      <p>Where will you make some memories this weekend?</p>
+      <br>
 
       <div class="card-container">
         <%@flats.each do |flat| %>
           <div class="card">
-            <div class="card-name"><%= link_to "Flat name", flat_path(flat)%></div>
-            <div class="card-corner">
-              <div class="card-price">30€</div>
+            <div class="card-banner">
+              <%= link_to "Flat name", flat_path(flat) %>
+              <div class="card-price"><%= flat.price %>€</div>
             </div>
           </div>
          <% end %>
+
+
+<!--          # remove this once we have enough db items -->
          <%@flats.each do |flat| %>
           <div class="card">
-            <%= link_to "Flat name", flat_path(flat)%>
+            <div class="card-banner">
+              <%= link_to "Flat name", flat_path(flat) %>
+              <div class="card-price"><%= flat.price %>€</div>
+            </div>
           </div>
          <% end %>
       </div>
