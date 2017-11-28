@@ -1,7 +1,9 @@
 <div class="container">
   <h1>New flat</h1>
   <div>
-    <%= render 'new_flat_form' %>
+    <% if policy(Flat).create? %>
+      <%= render 'new_flat_form' %>
+    <% end %>
   </div>
   <br>
   <%= link_to "Back to flats", flats_path, class: "btn btn-primary center-block"%>

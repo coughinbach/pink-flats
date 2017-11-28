@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :flats do
     resources :bookings, only: [ :create ]
   end
-  resources :bookings, only: [ :index, :destroy ]
+  resources :bookings, only: [ :destroy ]
+  get 'dashboard', to: "dashboards#dashboard"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
