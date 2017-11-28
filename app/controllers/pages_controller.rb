@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def dashboard
+    @flats = current_user.flats
+  end
 end
