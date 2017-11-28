@@ -24,7 +24,7 @@
 
 .banner-content {
   position: absolute;
-  left: 15px;
+  left: 40px;
   bottom: 17px;
   border-left: 8px;
 }
@@ -39,14 +39,54 @@
   border-radius: 100px;
   height: 45px;
   width: 45px;
+  margin-left: 30px;
 }
 
 #form-show {
   position: sticky;
   flex: 0 0 450px;
-  height: 100vh;
+  // height: 100vh;
+  height: 430px;
   top: 0;
   border: solid;
   border-width: thin;
   border-color: rgba(235, 235, 235, 235)
+}
+
+#flat-description {
+  text-align: justify;
+}
+
+.container-title-show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  border-width: thin;
+  border-bottom: 6px;
+  border-left: 6px;
+  border-right: 6px;
+}
+
+.anchor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: lighter;
+}
+
+#reviews-show {
+  border: solid;
+  border-width: thin;
+  border-bottom: 6px;
+  border-left: 6px;
+  border-right: 6px;
+}
+
+#localisation-show {
+  border: solid;
+  border-width: thin;
+  border-bottom: 6px;
+  border-left: 6px;
+  border-right: 6px;
 }
