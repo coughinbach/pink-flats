@@ -3,11 +3,14 @@
     <%@bookings.each do |booking| %>
       <div class="col-sm-4 col-sm-offset-4">
           <h2 class="card-name"><%= booking.flat.address %></h2>
-          <p>Nights: <%= booking.nights %></p>
-          <p>Start: <%= booking.start_date %></p>
-          <p>End: <%= booking.end_date %></p>
-          <p>Number of guests: <%= booking.guests %></p>
-          <p>Reserved by: <%= booking.user.first_name %> <%= booking.user.last_name %></p>
+          <ul>
+            <li>Nights: <%= booking.nights %></li>
+            <li>Start: <%= booking.start_date %></li>
+            <li>End: <%= booking.end_date %></li>
+            <li>Number of guests: <%= booking.guests %></li>
+            <li>Reserved by: <%= booking.user.first_name %> <%= booking.user.last_name %></li>
+          <ul>
+          <%= link_to "Cancel booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %>
         </div>
       </div>
     <% end %>
