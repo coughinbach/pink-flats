@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <%@bookings.each do |booking| %>
+      <div class="col-sm-4 col-sm-offset-4">
+          <h2 class="card-name"><%= booking.flat.address %></h2>
+          <p>Nights: <%= booking.nights %></p>
+          <p>Start: <%= booking.start_date %></p>
+          <p>End: <%= booking.end_date %></p>
+          <p>Number of guests: <%= booking.guests %></p>
+          <p>Reserved by: <%= booking.user.first_name %> <%= booking.user.last_name %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

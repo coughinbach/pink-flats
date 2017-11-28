@@ -11,6 +11,7 @@ p "creating users"
   user1 = User.new(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name).save
   user2 = User.new(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name).save
   user3 = User.new(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name).save
+
 p "users - done"
 
 p "creating flats"
@@ -22,4 +23,12 @@ p "creating flats"
   flat3.save
 p "flats - done"
 
+p "creating bookings"
+  booking1 = Booking.new(user_id: 1, flat_id: 1, nights: "8", start_date: "21/12/2015", end_date: "29/12/2015", guests: 4)
+  booking2 = Booking.new(user_id: 1, flat_id: 1, nights: "2", start_date: "18/01/2016", end_date: "20/02/2016", guests: 3)
+  booking3 = Booking.new(user_id: 1, flat_id: 1, nights: "4", start_date: "02/02/2016", end_date: "06/02/2016", guests: 1)
+  booking1.save
+  booking2.save
+  booking3.save
 
+p "bookings - done"
