@@ -9,12 +9,15 @@
       <div class="card-container">
         <%@flats.each do |flat| %>
           <div class="card">
-            <%= link_to flat.address, flat_path(flat)%>
+            <div class="card-name"><%= link_to "Flat name", flat_path(flat)%></div>
+            <div class="card-corner">
+              <div class="card-price">30€</div>
+            </div>
           </div>
          <% end %>
          <%@flats.each do |flat| %>
           <div class="card">
-            <%= link_to flat.address, flat_path(flat)%>
+            <%= link_to "Flat name", flat_path(flat)%>
           </div>
          <% end %>
       </div>
