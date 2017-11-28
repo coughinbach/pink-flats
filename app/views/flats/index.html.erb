@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <%@flats.each do |flat| %>
+      <div class="col-sm-4">
+        <h2 class="card-name"><%= flat.address %></h2>
+        <%= link_to "Make it!", flat_path(flat), class: "btn btn-primary btn-sm card-description font-weight-bold"%>
+        <%= image_tag 'https://kitt.lewagon.com/placeholder/users/random', class: "card-user" %>
+      </div>
+    <% end %>
+  </div>
+</div>
