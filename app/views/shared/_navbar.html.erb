@@ -1,23 +1,23 @@
-<div class="navbar-wagon">
+<div class= "<%= request.path == '/' ? 'navbar-home' : 'navbar-wagon' %>" >
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <img src="assets/logo-pink-flat.png" alt="logo">
+    <i class="fa fa-key" aria-hidden="true"></i>
   </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Flats</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+<!--     <a href="" class="navbar-wagon-item navbar-wagon-link"></a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a> -->
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <img src="https://kitt.lewagon.com/placeholder/users/adrienmoison" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Bookings</a></li>
           <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
           <li><a href="#">Log Out</a></li>
         </ul>
       </div>
