@@ -13,3 +13,26 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+h1 {
+  color: #846a6a;
+  font-size: 37px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+h2 {
+  color: #f4bcbc;
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: lighter;
+}
