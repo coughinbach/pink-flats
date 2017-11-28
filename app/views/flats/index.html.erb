@@ -1,0 +1,14 @@
+<h2>Chambres disponibles</h2>
+
+<div class="container">
+  <div class="row">
+    <%@flats.each do |flat| %>
+      <div class="col-sm-4">
+        <h3 class="card-name"><%= flat.address %></h3>
+        <%= link_to "Make it!", flat_path(flat), class: "btn btn-primary btn-sm card-description font-weight-bold"%>
+        <%= image_tag 'https://kitt.lewagon.com/placeholder/users/random', class: "card-user" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to "Add your flat", new_flat_path, class: "btn btn-primary" %>
