@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+
+a {
+  color: #4f5d75;
+  text-decoration: none;
+  &:hover {
+  color: #bfc0c0;
+  text-decoration: none;
+  }
+}
+
+.container {
+  padding: 40px 0px;
+}
