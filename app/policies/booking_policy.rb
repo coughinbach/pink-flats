@@ -1,4 +1,4 @@
-class FlatPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
 
   def create?
     return true
@@ -6,12 +6,14 @@ class FlatPolicy < ApplicationPolicy
 
   def update?
     record.user == user
-    # - record: the flat passed to the `authorize` method in controller
-    # - user:   the `current_user` signed in with Devise.
   end
 
   def destroy?
     record.user == user
+  end
+
+  def dashboard?
+    true
   end
 
   class Scope < Scope
