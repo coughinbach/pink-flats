@@ -4,24 +4,33 @@
   </div>
 </div>
 
-<div class="container">
-  <h1 class="text-center"><%= @flat.name %></h1>
-  <h3 class="text-center"><%= @flat.address %></h3>
-  <h5 class="text-center">Price : <%= @flat.price %></h5>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <ol class="list-unstyled">
-        <div class="text-center">
-          <p><%= @flat.description %></p>
-        </div>
-      </ol>
+<div class="flexbox">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-center"><%= @flat.name %></h1>
+        <img src="https://kitt.lewagon.com/placeholder/users/adrienmoison" id="avatar-show">
+        <%= "usersame" %>
+        <h3 class="text-center"><%= @flat.address %></h3>
+<!--         <div class="row"> -->
+<!--           <div class="col-md-6 col-md-offset-3"> -->
+<!--               <div class="text-center"> -->
+                <% 10.times do %>
+                <p><%= @flat.description %></p>
+                <% end %>
+<!--               </div> -->
+<!--           </div> -->
+<!--         </div> -->
+      </div>
+      <div class="col-md-6" id="form-show">
+        <h1 class="text-center"><%= @flat.price %>€ per night</h1>
+        <%= render 'new_booking_form' %>
+      </div>
     </div>
   </div>
-  <%= render 'new_booking_form' %>
 </div>
-<div class="container">
-  <div class="text-center"><%= link_to "Back to list", flats_path, class: "btn btn-primary" %>
-  <%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
-  <%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %></div>
-  </div>
+
+<div class="text-center"><%= link_to "Back to list", flats_path, class: "btn btn-primary" %>
+<%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
+<%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %></div>
 </div>
