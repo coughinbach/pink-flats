@@ -1,27 +1,28 @@
-.cards {
+.card-container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .card {
   flex: 1 1 250px;
+  height: 200px;
   background-size: cover !important;
-  background-image: asset-url('https://kitt.lewagon.com/placeholder/cities/shanghai');
+  background-image: url('card.jpg');
   background-position: center;
   color: white;
   position: relative;
-  border: 1px solid black;
+  margin: 25px 10px;
 }
-.card-price {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-.card-name {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
+// .card-price {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-size: 15px;
+//   text-transform: uppercase;
+// }
+// .card-name {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 10px;
+// }
