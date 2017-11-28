@@ -1,19 +1,37 @@
-<div class="container">
-  <h1 class="text-center"><%= @flat.address %></h1>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <ol class="list-unstyled">
-        <div class="text-center">
-          <p><%= @flat.description %></p>
-        </div>
-      </ol>
+<div class="banner-show" style="background-image: url('https://kitt.lewagon.com/placeholder/cities/paris');">
+  <div class="banner-content">
+    <a class="btn btn-primary btn-lg">See more pictures</a>
+  </div>
+</div>
+
+<div class="flexbox">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-center"><%= @flat.name %></h1>
+        <img src="https://kitt.lewagon.com/placeholder/users/adrienmoison" id="avatar-show">
+        <%= "usersame" %>
+        <h3 class="text-center"><%= @flat.address %></h3>
+<!--         <div class="row"> -->
+<!--           <div class="col-md-6 col-md-offset-3"> -->
+<!--               <div class="text-center"> -->
+                <% 10.times do %>
+                <p><%= @flat.description %></p>
+                <% end %>
+<!--               </div> -->
+<!--           </div> -->
+<!--         </div> -->
+      </div>
+      <div class="col-md-6" id="form-show">
+        <h1 class="text-center"><%= @flat.price %>€ per night</h1>
+        <% if policy(Booking).create? %>
+          <%= render 'new_booking_form' %>
+        <% end %>
+      </div>
     </div>
   </div>
-  <% if policy(Booking).create? %>
-    <%= render 'new_booking_form' %>
-  <% end %>
-
 </div>
+
 <div><%= link_to "Back to list", flats_path, class: "btn btn-primary" %></div>
 <% if policy(@flat).update? || current_user.admin %>
     <%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
@@ -22,6 +40,3 @@
 <% if policy(@flat).destroy? || current_user.admin %>
   <%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
 <%end %>
-
-
-
