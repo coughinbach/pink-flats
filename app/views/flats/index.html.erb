@@ -1,14 +1,38 @@
-<h2>Chambres disponibles</h2>
+<%= render "shared/navbar" %>
 
 <div class="container">
   <div class="row">
-    <%@flats.each do |flat| %>
-      <div class="col-sm-4">
-        <h2 class="card-name"><%= flat.name %></h2>
-        <%= link_to "Make it!", flat_path(flat), class: "btn btn-primary btn-sm card-description font-weight-bold"%>
-        <%= image_tag 'https://kitt.lewagon.com/placeholder/users/random', class: "card-user" %>
+    <div class="col-xs-10 col-xs-offset-1">
+
+      <h1>Available rooms</h1>
+      <p>Where will you make some memories this weekend?</p>
+      <br>
+
+      <div class="card-container">
+        <%@flats.each do |flat| %>
+          <div class="card">
+            <div class="card-banner">
+              <%= link_to flat.name, flat_path(flat) %>
+              <div class="card-price"><%= flat.price %>€</div>
+            </div>
+          </div>
+         <% end %>
+
+
+<!--          # remove this once we have enough db items -->
+         <%@flats.each do |flat| %>
+          <div class="card">
+            <div class="card-banner">
+              <%= link_to flat.name, flat_path(flat) %>
+              <div class="card-price"><%= flat.price %>€</div>
+            </div>
+          </div>
+         <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
-<%= link_to "Add your flat", new_flat_path, class: "btn btn-primary" %>
+
+
+
+

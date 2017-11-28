@@ -24,13 +24,19 @@
       </div>
       <div class="col-md-6" id="form-show">
         <h1 class="text-center"><%= @flat.price %>€ per night</h1>
-        <%= render 'new_booking_form' %>
+        <% if policy(Booking).create? %>
+          <%= render 'new_booking_form' %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
-<div class="text-center"><%= link_to "Back to list", flats_path, class: "btn btn-primary" %>
-<%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
-<%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %></div>
-</div>
+<div><%= link_to "Back to list", flats_path, class: "btn btn-primary" %></div>
+<% if policy(@flat).update? || current_user.admin %>
+    <%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
+<%end%>
+
+<% if policy(@flat).destroy? || current_user.admin %>
+  <%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
+<%end %>
