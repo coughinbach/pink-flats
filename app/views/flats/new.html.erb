@@ -1,4 +1,3 @@
-<%= render "shared/navbar" %>
 
 <div class="banner_new_flat" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,6,0.6) 50%), url('https://www.somerleyton.co.uk/wp-content/uploads/2017/08/Somerleyton-bedroom.jpg');">
 
@@ -16,8 +15,6 @@
         <% if policy(Flat).create? %>
           <%= render 'new_flat_form' %>
         <% end %>
-        <br>
-        <%= link_to "Back to flats", flats_path, class: "link_return_to_flats"%>
       </div>
     </div>
   </div>
