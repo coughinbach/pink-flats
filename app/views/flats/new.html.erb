@@ -13,7 +13,9 @@
     <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-5">
       <div class="form_emplacement">
         <h1><strong>ADD YOUR FLAT</strong></h1>
-        <%= render 'new_flat_form' %>
+        <% if policy(Flat).create? %>
+          <%= render 'new_flat_form' %>
+        <% end %>
         <br>
         <%= link_to "Back to flats", flats_path, class: "link_return_to_flats"%>
       </div>
