@@ -1,6 +1,6 @@
 import "bootstrap";
 import flatpickr from 'flatpickr';
-import 'flatpickr/dist/themes/airbnb.css'
+import 'flatpickr/dist/themes/dark.css'
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin"
 
 flatpickr("#range_start", {
