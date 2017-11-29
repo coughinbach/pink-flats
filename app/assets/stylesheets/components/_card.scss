@@ -2,13 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
 }
 
 .card {
   flex: 0 0 450px;
   height: 320px;
   background-size: cover !important;
-  background-image: url('card.jpg');
+  // background-image: url('card.jpg');
   background-position: center;
   color: white;
   position: relative;
@@ -24,6 +25,15 @@
   height: 60px;
   padding: 10px;
   background: white;
+}
+
+.card-name {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #8b8982;
+  font-weight: lighter;
+  font-size: 28px;
   a {
     color: #8b8982;
     font-weight: lighter;
@@ -33,9 +43,24 @@
 
 .card-price {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   right: 15px;
   color: #8b8982;
-  font-weight: lighter;
+  font-weight: bolder;
   font-size: 28px;
+}
+
+.card-link {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ width: 100%;
+ z-index: 2;
+ background: black;
+ opacity: 0;
+}
+
+.card-link:hover {
+ opacity: 0.1;
 }
