@@ -1,13 +1,14 @@
 .banner-show {
   color: white;
   text-align: center;
-  height: 50vh;
+  height: 60vh;
   background-size: cover !important;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  border-bottom: 5px solid #8b8982;
 }
 .banner-show h1 {
   font-size: 50px;
