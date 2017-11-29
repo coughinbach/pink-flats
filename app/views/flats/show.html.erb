@@ -35,11 +35,11 @@
           <%= link_to "Back to list", flats_path, class: "btn btn-primary" %>
 
           <% if policy(@flat).update? || current_user.admin %>
-          <%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
+          <%= link_to "Edit your listing", edit_flat_path(@flat), class: "btn btn-primary" %>
           <%end%>
 
           <% if policy(@flat).destroy? || current_user.admin %>
-          <%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
+          <%= link_to "Delete your listing", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
           <%end %>
         </div>
       </div>
