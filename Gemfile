@@ -19,12 +19,9 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
-<<<<<<< HEAD
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
-=======
 gem 'geocoder'
->>>>>>> 788f629b5001298b83267d1602f9664fc017c030
 
 group :development, :test do
   gem 'pry-byebug'
