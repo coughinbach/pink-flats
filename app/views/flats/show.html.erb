@@ -20,15 +20,29 @@
           <img src="https://kitt.lewagon.com/placeholder/users/adrienmoison" id="avatar-show">
         </div>
         <h3 class="text-center"><%= @flat.address %></h3>
+        <br>
         <% 2.times do %>
         <p id="flat-description"><%= @flat.description %></p>
         <% end %>
         <h3 class="text-center" id="reviews-show"><%= "Reviews" %></h3>
-        <p>Maxxxxxx de reviews</p>
+        <p>No reviews for this property yet :(</p>
         <h3 class="text-center" id="map-show"><%= "Map" %></h3>
 
         <!-- MAP HERE -->
         <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markers.to_json %>"></div>
+        <br>
+        <br>
+        <div class="buttons">
+          <%= link_to "Back to list", flats_path, class: "btn btn-primary" %>
+
+          <% if policy(@flat).update? || current_user.admin %>
+          <%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
+          <%end%>
+
+          <% if policy(@flat).destroy? || current_user.admin %>
+          <%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
+          <%end %>
+        </div>
       </div>
       <div class="col-md-3 col-md-offset-1" id="form-show">
         <h1 class="text-center"><%= @flat.price %>€ per night</h1>
@@ -40,11 +54,4 @@
   </div>
 </div>
 
-<div><%= link_to "Back to list", flats_path, class: "btn btn-primary" %></div>
-<% if policy(@flat).update? || current_user.admin %>
-<%= link_to "Edit your flat", edit_flat_path(@flat), class: "btn btn-primary" %>
-<%end%>
 
-<% if policy(@flat).destroy? || current_user.admin %>
-<%= link_to "Delete your flat", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
-<%end %>
