@@ -10,7 +10,9 @@
         <%@flats.each do |flat| %>
           <div class="card" style="background-image: url(<%= cl_image_path flat.photo, height: 300, width: 400, class: "show-image" %>)">
             <div class="card-banner">
-              <%= link_to flat.name, flat_path(flat) %>
+              <div class="card-name">
+                <%= link_to flat.name, flat_path(flat) %>
+              </div>
               <div class="card-price"><%= flat.price %>€</div>
             </div>
           </div>

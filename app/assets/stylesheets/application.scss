@@ -39,4 +39,17 @@ p {
 
 .container {
   min-height: 90vh;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #846a6a;
+  border: 1px solid #846a6a;
+  font-size: 12px;
+  margin-right: 10px;
+  &:hover {
+    background-color: white;
+    color: #846a6a;
+    border: white;
+  }
 }
