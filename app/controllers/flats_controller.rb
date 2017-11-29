@@ -10,6 +10,7 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
     authorize @flat
     @booking = Booking.new
+    @markers = [ { lat: @flat.latitude, lng: @flat.longitude } ]
   end
 
   def new
@@ -50,7 +51,7 @@ class FlatsController < ApplicationController
 
   private
   def flat_params
-    params.require(:flat).permit(:address, :description, :rooms, :price, :name)
+    params.require(:flat).permit(:address, :description, :rooms, :price, :name, :photo)
   end
 
 end
