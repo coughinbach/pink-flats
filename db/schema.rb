@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20171129094431) do
     t.integer "rooms"
     t.text "description"
     t.integer "price"
-    t.float "lat"
-    t.float "lng"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
