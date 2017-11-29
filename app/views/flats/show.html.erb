@@ -1,7 +1,7 @@
 <div class="banner-show" style="background-image: url(<%= cl_image_path @flat.photo, height: 300, width: 400, class: "show-image" %>)">
 
   <div class="banner-content">
-    <a class="btn btn-primary btn-lg">See more pictures</a>
+    <a class="btn btn-show btn-lg">See more pictures</a>
   </div>
 </div>
 
@@ -32,14 +32,18 @@
         <br>
         <br>
         <div class="buttons">
-          <%= link_to "Back to list", flats_path, class: "btn btn-primary" %>
+          <%= link_to "Back to list", flats_path, class: "btn btn-show" %>
 
           <% if policy(@flat).update? || current_user.admin %>
-          <%= link_to "Edit your listing", edit_flat_path(@flat), class: "btn btn-primary" %>
+            <%= link_to edit_flat_path(@flat), class: "btn btn-show" do %>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <% end %>
           <%end%>
 
           <% if policy(@flat).destroy? || current_user.admin %>
-          <%= link_to "Delete your listing", flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
+              <%= link_to flat_path(@flat), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-show" do %>
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <% end %>
           <%end %>
         </div>
       </div>
