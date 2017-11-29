@@ -1,13 +1,14 @@
 .banner-show {
   color: white;
   text-align: center;
-  height: 50vh;
+  height: 60vh;
   background-size: cover !important;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  border-bottom: 5px solid #8b8982;
 }
 .banner-show h1 {
   font-size: 50px;
@@ -50,11 +51,13 @@
   top: 0;
   border: solid;
   border-width: thin;
-  border-color: rgba(235, 235, 235, 235)
+  border-color: rgba(235, 235, 235, 235);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }
 
 #flat-description {
   text-align: justify;
+  padding-left: 10px;
 }
 
 .container-title-show {
@@ -66,6 +69,17 @@
   border-bottom: 6px;
   border-left: 6px;
   border-right: 6px;
+  padding-left: 10px;
+}
+
+.reviews-show, p {
+  padding-left: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
 }
 
 .anchor {
@@ -75,7 +89,7 @@
   font-weight: lighter;
 }
 
-#reviews-show {
+#localisation-show {
   border: solid;
   border-width: thin;
   border-bottom: 6px;
@@ -83,10 +97,6 @@
   border-right: 6px;
 }
 
-#localisation-show {
-  border: solid;
-  border-width: thin;
-  border-bottom: 6px;
-  border-left: 6px;
-  border-right: 6px;
+.btn-primary {
+  margin: 5px;
 }

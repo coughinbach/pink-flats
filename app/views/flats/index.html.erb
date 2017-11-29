@@ -6,31 +6,33 @@
       <p>Where will you make some memories this weekend?</p>
       <br>
 
-      <div class="card-container">
+      <div class="card-container" >
         <%@flats.each do |flat| %>
-          <div class="card">
+          <div class="card" style="background-image: url(<%= cl_image_path flat.photo, height: 300, width: 400, class: "show-image" %>)">
             <div class="card-banner">
-              <%= link_to flat.name, flat_path(flat) %>
+              <div class="card-name">
+                <%= link_to flat.name, flat_path(flat) %>
+              </div>
               <div class="card-price"><%= flat.price %>€</div>
             </div>
           </div>
-         <% end %>
-
-
-<!--          # remove this once we have enough db items -->
-         <%@flats.each do |flat| %>
-          <div class="card">
-            <div class="card-banner">
-              <%= link_to flat.name, flat_path(flat) %>
-              <div class="card-price"><%= flat.price %>€</div>
-            </div>
-          </div>
-         <% end %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
+<!--          # remove this once we have enough db items -->
 
 
 
+       <!--    <%@flats.each do |flat| %>
+          <div class="card">
+            <div class="card-banner">
+              <%= link_to flat.name, flat_path(flat) %>
+              <div class="card-price"><%= flat.price %>€</div>
+            </div>
+          </div>
+         <% end %>
+
+         -->
