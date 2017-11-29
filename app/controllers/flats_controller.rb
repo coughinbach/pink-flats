@@ -7,6 +7,7 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
     authorize @flat
     @booking = Booking.new
+    @markers = [ { lat: @flat.latitude, lng: @flat.longitude } ]
   end
 
   def new
