@@ -8,6 +8,7 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
+gem 'pundit'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
@@ -18,6 +19,9 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
+gem 'carrierwave', '~> 1.2'
+gem 'cloudinary'
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-byebug'

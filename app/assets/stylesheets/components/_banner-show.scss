@@ -1,0 +1,97 @@
+.banner-show {
+  color: white;
+  text-align: center;
+  height: 50vh;
+  background-size: cover !important;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.banner-show h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner-show p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.banner-content {
+  position: absolute;
+  left: 40px;
+  bottom: 17px;
+  border-left: 8px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#avatar-show {
+  border-radius: 100px;
+  height: 45px;
+  width: 45px;
+  margin-left: 30px;
+}
+
+#form-show {
+  position: sticky;
+  flex: 0 0 450px;
+  // height: 100vh;
+  height: 430px;
+  top: 0;
+  border: solid;
+  border-width: thin;
+  border-color: rgba(235, 235, 235, 235);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+}
+
+#flat-description {
+  text-align: justify;
+  padding-left: 10px;
+}
+
+.container-title-show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  border-width: thin;
+  border-bottom: 6px;
+  border-left: 6px;
+  border-right: 6px;
+  padding-left: 10px;
+}
+
+.reviews-show, p {
+  padding-left: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.anchor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: lighter;
+}
+
+#localisation-show {
+  border: solid;
+  border-width: thin;
+  border-bottom: 6px;
+  border-left: 6px;
+  border-right: 6px;
+}
