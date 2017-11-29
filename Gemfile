@@ -19,6 +19,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
+gem 'carrierwave', '~> 1.2'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'pry-byebug'
