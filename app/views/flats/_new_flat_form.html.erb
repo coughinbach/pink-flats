@@ -1,5 +1,6 @@
 <div class="simple_form_for_new_flat">
   <%= simple_form_for [@flat] do |f| %>
+  <%= f.input :name, :placeholder => "name of the flat"%>
   <%= f.input :address, :placeholder => "address of the flat"%>
   <%= f.input :description, :placeholder => "add a small description of your flat" %>
   <%= f.input :rooms, collection: (1..10), :placeholder => "how many room(s) available ?" %>
