@@ -5,7 +5,8 @@
   <%= f.input :description, :placeholder => "add a small description of your flat" %>
   <%= f.input :rooms, collection: (1..10), :placeholder => "how many room(s) available ?" %>
   <%= f.input :price %>
-  <%= f.input :image, as: :file, label: "add pictures" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit "Add your flat", class: "btn btn-primary" %>
 <% end %>
 </div>
