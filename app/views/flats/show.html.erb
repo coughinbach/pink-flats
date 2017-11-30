@@ -26,14 +26,19 @@
 
         <!-- REVIEWS HERE -->
         <h3 class="text-center" id="reviews-show">Reviews</h3>
-        <div class="rating-avatar">
-          <div class="flexbox-comment">
-          <% @flat.reviews.each do |review| %>
-            <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show"><p>Lola</p>
-        <p class="fa fa-star rating"><%= review.rating %></p>
-        </div>
-        <p class="comment">- "<%= review.content %>"</p>
-        </div>
+        <% if @flat.reviews.empty? %>
+          <p class="comment">No reviews yet for this property :( ADD BUTTON TO CREATE REVIEW</p>
+        <% else %>
+          <div class="rating-avatar">
+            <div class="flexbox-comment">
+              <% @flat.reviews.each do |review| %>
+                <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show"><p>Lola</p>
+                <p class="fa fa-star rating"><%= review.rating %></p>
+                            </div>
+                <p class="comment">- "<%= review.content %>"</p>
+              <% end %>
+
+          </div>
         <% end %>
 
         <!-- MAP HERE -->
