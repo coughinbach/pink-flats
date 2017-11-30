@@ -6,9 +6,9 @@
       <%= form_tag flats_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control search-bar",
+        class: "form-control search-bar-home",
         placeholder: "Enter a city to find your perfect love nest" %>
-        <%= submit_tag 'Search', class: 'btn btn-search' %>
+        <%= submit_tag 'Search', class: 'btn btn-search-home' %>
       <% end %>
     </div>
   </div>
