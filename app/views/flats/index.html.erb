@@ -8,19 +8,27 @@
 
       <div class="card-container" >
         <%@flats.each do |flat| %>
-
-        <% if flat.photo_url.nil? %>
-        <% else %>
-          <div class="card" style="background-image: url(<%= cl_image_path flat.photo, height: 300, width: 400, class: "show-image" %>)">
-            <a class="card-link" href="<%= flat_path(flat) %>"></a>
-            <div class="card-banner">
-              <div class="card-name">
-                <%= flat.name %>
+          <% if flat.photo_url.nil? %>
+            <div class="card" style="background-image: url(http://res.cloudinary.com/dp7vcrxlv/image/upload/v1512041034/michael-d-beckwith-258305_kjckdx.jpg)">
+              <a class="card-link" href="<%= flat_path(flat) %>"></a>
+              <div class="card-banner">
+                <div class="card-name">
+                  <%= flat.name %>
+                </div>
+                <div class="card-price"><%= flat.price %>€</div>
               </div>
-              <div class="card-price"><%= flat.price %>€</div>
             </div>
-          </div>
-        <% end %>
+          <% else %>
+            <div class="card" style="background-image: url(<%= cl_image_path flat.photo, height: 300, width: 400, class: "show-image" %>)">
+              <a class="card-link" href="<%= flat_path(flat) %>"></a>
+              <div class="card-banner">
+                <div class="card-name">
+                  <%= flat.name %>
+                </div>
+                <div class="card-price"><%= flat.price %>€</div>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
