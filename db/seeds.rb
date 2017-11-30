@@ -61,11 +61,11 @@ p "creating bookings"
 p "bookings - done"
 
 p "creating reviews"
-  review1 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5))
-  review2 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5))
-  review3 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5))
-  review1.save
-  review2.save
-  review3.save
+  review1 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat1, user: user1)
+  review2 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat2, user: user2)
+  review3 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat3, user: user3)
+  review1.save!
+  review2.save!
+  review3.save!
 
 p "reviews - done"
