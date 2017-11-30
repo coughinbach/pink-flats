@@ -3,7 +3,14 @@ class FlatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @flats = policy_scope(Flat).search_by_location(params[:query]).order(created_at: :desc)
+    if params[:query]
+      @flats = policy_scope(Flat).search_by_location(params[:query]).order(created_at: :desc)
+    else
+      @flats = policy_scope(Flat).order(created_at: :desc)
+    end
+    @markers = @flats.map do |flat|
+      { lat: flat.latitude, lng: flat.longitude }
+    end
   end
 
   def show
