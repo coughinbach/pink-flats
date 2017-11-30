@@ -48,6 +48,21 @@
   color: white;
   font-size: 14px;
 }
+
+.navbar-signup {
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  border: 3px solid white;
+  border-radius: 40px;
+  background-color: transparent;
+  font-size: 14px;
+}
+.navbar-signup:hover {
+  color: white;
+  background-color: white;
+  color: #8b8982;
+}
 .navbar-wagon-link:hover, .navbar-home-link:hover {
   color: #8b8982;
   text-decoration: none;
