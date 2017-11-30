@@ -1,10 +1,12 @@
+.btn-search-home, .btn-search-index {
+  border-radius: 40px;
+  background-color: transparent;
+}
+
 .btn-search-home {
     border: 3px solid white;
-    border-radius: 40px;
-    background-color: transparent;
     color: white;
     margin-top: 20px;
-    font-size: 14px;
     &:hover {
     background-color: white;
     color: #8b8982;
@@ -12,10 +14,7 @@
 }
 .btn-search-index {
     border: 3px solid #8b8982;
-    border-radius: 40px;
-    background-color: transparent;
     color: #8b8982;
-    font-size: 14px;
     &:hover {
     background-color: #8b8982;
     color: white;
@@ -27,21 +26,18 @@
   align-items: center;
   margin-bottom: 40px;
 }
-.search-bar-home {
-  width: 500px;
-  border: none;
+.search-bar-home, .search-bar-index {
+  width: 500px !important;
   border-radius: 40px;
   font-size: 12px;
   padding-left: 15px;
   letter-spacing: 2px;
+}
+
+.search-bar-home {
+  border: none;
   opacity: 0.8;
 }
 .search-bar-index {
-  width: 500px !important;
   border: 3px solid #8b8982;
-  border-radius: 40px;
-  font-size: 12px;
-  padding-left: 15px;
-  letter-spacing: 2px;
-  opacity: 0.8;
 }
