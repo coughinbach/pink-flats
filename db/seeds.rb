@@ -30,7 +30,7 @@ p "creating flats"
   flat2.save!
   flat2.remote_photo_url = url2
   url3 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511956719/flat-1_eiqljy.jpg"
-  flat3 = Flat.new(address: "16, Villa Gaudelet - 75011 Paris", rooms: "4", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 113, name: "Incredible stay @ love place")
+  flat3 = Flat.new(address: "5 rue Sainte Catherine 69001 Lyon", rooms: "4", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 113, name: "Incredible stay @ love place")
   flat3.user = user1
   flat3.save!
   flat3.remote_photo_url = url3

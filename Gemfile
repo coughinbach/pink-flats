@@ -22,6 +22,7 @@ gem 'faker'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
 gem 'geocoder'
+gem 'pg_search'
 
 group :development, :test do
   gem 'pry-byebug'
