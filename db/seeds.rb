@@ -19,41 +19,53 @@ p "creating users"
 p "users - done"
 
 p "creating flats"
-  url1 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511956719/flat-2_ap73k7.jpg"
-  flat1 = Flat.new(address: "105, rue des Dames - 75017 Paris", rooms: "2", description: "Large room with garden view, wooden flooring, private toilet/shower, work table, closet, SatTV, AC/ heater, small locker, tea/coffee maker, free wifi. Located centrally just off main road has easy access to transport, restaurants, tourist spots. The room is part of a villa located in central part of Jaipur, has within one-two kilometer good restaurants, Fast food outlets, Post office, tourist office, major market, the old city of Jaipur, ATMs, etc. The room is on ground floor with bathrooms ensuite and is suitable for two persons. Just a short walk brings you to the main city center with access to all kinds of transport and facilities.", price: 43, name: "Pinky Villa")
+  url1 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1512041034/michael-d-beckwith-258305_kjckdx.jpg"
+  flat1 = Flat.new(address: "105, rue des Dames - 75017 Paris", rooms: "2", description: "Large room with garden view, wooden flooring, private toilet/shower, work table, closet, SatTV, AC/ heater, small locker, tea/coffee maker, free wifi. Located centrally just off main road has easy access to transport, restaurants, tourist spots. The room is part of a villa located in central part of Jaipur, has within one-two kilometer good restaurants, Fast food outlets, Post office, tourist office, major market, the old city of Jaipur, ATMs, etc. The room is on ground floor with bathrooms ensuite and is suitable for two persons. Just a short walk brings you to the main city center with access to all kinds of transport and facilities.", price: 43, name: "Fairytale Castle")
   flat1.user = user1
   flat1.remote_photo_url = url1
   flat1.save!
 
-  url2 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511956719/flat-3_nngsc0.jpg"
-  flat2 = Flat.new(address: "12, rue Emilio Castelar - 75012 Paris", rooms: "1", description: "A bright & spacious loft, featuring an exterior rooftop patio & BBQ, perfect for enjoying the sunny days of summer outside. This unique space is great for lovers who want to spend a hoy & quality stay at the center of everything. Our building has a lot of character. It's a typical plateau home built in the late 1800's and the loft feels SPACIOUS, the ceilings are very high and it has a lot of natural light because of the SKY LIGHTS. The place features lots of ORIGINAL ARTWORK and we have recently installed AIR CONDITIONING in the unit to keep you cool during the warmer summer days.", price: 66, name: "Lovely Flat")
+  url2 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1512041036/neonbrand-381372_hozxae.jpg"
+  flat2 = Flat.new(address: "12, rue Emilio Castelar - 75012 Paris", rooms: "1", description: "A bright & spacious loft, featuring an exterior rooftop patio & BBQ, perfect for enjoying the sunny days of summer outside. This unique space is great for lovers who want to spend a hoy & quality stay at the center of everything. Our building has a lot of character. It's a typical plateau home built in the late 1800's and the loft feels SPACIOUS, the ceilings are very high and it has a lot of natural light because of the SKY LIGHTS. The place features lots of ORIGINAL ARTWORK and we have recently installed AIR CONDITIONING in the unit to keep you cool during the warmer summer days.", price: 66, name: "Romantic appartment")
   flat2.user = user1
   flat2.remote_photo_url = url2
   flat2.save!
 
   url3 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511956719/flat-1_eiqljy.jpg"
-  flat3 = Flat.new(address: "5 rue Sainte Catherine 69001 Lyon", rooms: "4", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 113, name: "Incredible stay @ love place")
+  flat3 = Flat.new(address: "5 rue Sainte Catherine 69001 Lyon", rooms: "4", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 113, name: "Secret log cabin")
   flat3.user = user1
   flat3.remote_photo_url = url3
   flat3.save!
 
-  url4 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511964632/flat-4_bxe6hq.jpg"
-  flat4 = Flat.new(address: "38, rue de Bellechasse - 75007 Paris", rooms: "3", description: "Large room with garden view, wooden flooring, private toilet/shower, work table, closet, SatTV, AC/ heater, small locker, tea/coffee maker, free wifi. Located centrally just off main road has easy access to transport, restaurants, tourist spots. The room is part of a villa located in central part of Jaipur, has within one-two kilometer good restaurants, Fast food outlets, Post office, tourist office, major market, the old city of Jaipur, ATMs, etc. The room is on ground floor with bathrooms ensuite and is suitable for two persons. Just a short walk brings you to the main city center with access to all kinds of transport and facilities.", price: 211, name: "Eiffel Super Flat")
+  url4 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1512041033/alisha-hieb-364487_ewmp04.jpg"
+  flat4 = Flat.new(address: "38, rue de Bellechasse - 75007 Paris", rooms: "3", description: "Large room with garden view, wooden flooring, private toilet/shower, work table, closet, SatTV, AC/ heater, small locker, tea/coffee maker, free wifi. Located centrally just off main road has easy access to transport, restaurants, tourist spots. The room is part of a villa located in central part of Jaipur, has within one-two kilometer good restaurants, Fast food outlets, Post office, tourist office, major market, the old city of Jaipur, ATMs, etc. The room is on ground floor with bathrooms ensuite and is suitable for two persons. Just a short walk brings you to the main city center with access to all kinds of transport and facilities.", price: 211, name: "Arty Loft")
   flat4.user = user1
   flat4.remote_photo_url = url4
   flat4.save!
 
-  url5 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511964632/flat-5_ccoqz6.jpg"
-  flat5 = Flat.new(address: "139, rue de Rennes - 75006 Paris", rooms: "2", description: "A bright & spacious loft, featuring an exterior rooftop patio & BBQ, perfect for enjoying the sunny days of summer outside. This unique space is great for lovers who want to spend a hoy & quality stay at the center of everything. Our building has a lot of character. It's a typical plateau home built in the late 1800's and the loft feels SPACIOUS, the ceilings are very high and it has a lot of natural light because of the SKY LIGHTS. The place features lots of ORIGINAL ARTWORK and we have recently installed AIR CONDITIONING in the unit to keep you cool during the warmer summer days.", price: 98, name: "Secret Villa in Panam")
+  url5 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511964632/flat-6_ybwsv0.jpg"
+  flat5 = Flat.new(address: "139, rue de Rennes - 75006 Paris", rooms: "2", description: "A bright & spacious loft, featuring an exterior rooftop patio & BBQ, perfect for enjoying the sunny days of summer outside. This unique space is great for lovers who want to spend a hoy & quality stay at the center of everything. Our building has a lot of character. It's a typical plateau home built in the late 1800's and the loft feels SPACIOUS, the ceilings are very high and it has a lot of natural light because of the SKY LIGHTS. The place features lots of ORIGINAL ARTWORK and we have recently installed AIR CONDITIONING in the unit to keep you cool during the warmer summer days.", price: 98, name: "Cozy Chalet")
   flat5.user = user1
   flat5.remote_photo_url = url5
   flat5.save!
 
-  url6 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511964632/flat-6_ybwsv0.jpg"
-  flat6 = Flat.new(address: "10, rue Boizot - 92310 Sèvres", rooms: "4", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 113, name: "Incredible stay @ love place")
+  url6 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511964632/flat-5_ccoqz6.jpg"
+  flat6 = Flat.new(address: "10, rue Boizot - 92310 Sèvres", rooms: "2", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 72, name: "Mediterranean Mansion")
   flat6.user = user1
   flat6.remote_photo_url = url6
   flat6.save!
+
+  url7 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1512041033/markus-spiske-37931_fklfni.jpg"
+  flat7 = Flat.new(address: "3 rue de l'arbre sec 69001 Lyon", rooms: "1", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 80, name: "Modern Luxury")
+  flat7.user = user1
+  flat7.remote_photo_url = url7
+  flat7.save!
+
+  url8 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1512041037/jessica-furtney-244838_w2lmqq.jpg"
+  flat8 = Flat.new(address: "27 Rue de la République, 69002 Lyon", rooms: "2", description: "It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis. It is located in the western part of the island that is located Lembongan very strategic because it is located between two beaches has its own beauty unparalleled in Lembongan the “Dream Beach”. Is just 20 meters from the small beach full of exotis and sand so white, away from the crowds that are perfect for sunbathing and relaxing.", price: 110, name: "Southern Charm")
+  flat8.user = user1
+  flat8.remote_photo_url = url8
+  flat8.save!
 
 p "flats - done"
 
