@@ -64,8 +64,14 @@ p "creating reviews"
   review1 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat1, user: user1)
   review2 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat2, user: user2)
   review3 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat3, user: user3)
+  review4 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat4, user: user1)
+  review5 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat5, user: user2)
+  review6 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat6, user: user3)
   review1.save!
   review2.save!
   review3.save!
+  review4.save!
+  review5.save!
+  review6.save!
 
 p "reviews - done"

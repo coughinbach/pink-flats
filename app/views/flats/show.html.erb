@@ -26,11 +26,17 @@
 
         <!-- REVIEWS HERE -->
         <h3 class="text-center" id="reviews-show">Reviews</h3>
+        <div class="flexbox">
+        <div class="row">
+          <div class="rating-avatar text-center">
         <% @flat.reviews.each do |review| %>
-        <p><%= review.content %></p>
+        <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show">
         <p><%= review.rating %></p>
+        </div>
+        <p class="comment"><%= review.content %></p>
         <% end %>
-        <p>Hello</p>
+        </div>
+        </div>
 
         <!-- MAP HERE -->
         <h3 class="text-center" id="map-show"><%= "Map" %></h3>
