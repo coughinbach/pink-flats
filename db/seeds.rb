@@ -9,7 +9,6 @@ require 'faker'
 
 Booking.destroy_all
 Flat.destroy_all
-User.destroy_all
 
 p "creating users"
   user1 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
@@ -65,5 +64,8 @@ p "creating reviews"
   review1 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5))
   review2 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5))
   review3 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5))
+  review1.save
+  review2.save
+  review3.save
 
 p "reviews - done"

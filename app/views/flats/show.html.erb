@@ -23,11 +23,18 @@
         <% 2.times do %>
         <p id="flat-description"><%= @flat.description %></p>
         <% end %>
-        <h3 class="text-center" id="reviews-show"><%= "Reviews" %></h3>
-        <p>No reviews for this property yet :(</p>
-        <h3 class="text-center" id="map-show"><%= "Map" %></h3>
+
+        <!-- REVIEWS HERE -->
+        <h3 class="text-center" id="reviews-show">Reviews</h3>
+        <% @flat.reviews.each do |review| %>
+        <p><%= review.content %></p>
+        <p><%= review.rating %></p>
+        <% end %>
+        <p>Hello</p>
 
         <!-- MAP HERE -->
+        <h3 class="text-center" id="map-show"><%= "Map" %></h3>
+
         <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markers.to_json %>"></div>
         <br>
         <br>

@@ -11,6 +11,7 @@ class FlatsController < ApplicationController
     authorize @flat
     @booking = Booking.new
     @markers = [ { lat: @flat.latitude, lng: @flat.longitude } ]
+    @review = @flat.reviews
   end
 
   def new
