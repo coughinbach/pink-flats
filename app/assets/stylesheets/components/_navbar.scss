@@ -52,15 +52,16 @@
 .navbar-signup {
   color: white;
   font-size: 18px;
-  font-weight: bold;
-  border: 1px solid white;
-  border-radius: 5px;
-  opacity: 0.8;
+  font-weight: bolder;
+  border: 3px solid white;
+  border-radius: 40px;
+  background-color: transparent;
+  font-size: 14px;
 }
 .navbar-signup:hover {
   color: white;
-  border: 1px solid #F6B6B7;
-  opacity: 1;
+  background-color: white;
+  color: #8b8982;
 }
 .navbar-wagon-link:hover, .navbar-home-link:hover {
   color: #8b8982;
