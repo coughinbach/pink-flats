@@ -9,7 +9,6 @@ require 'faker'
 
 Booking.destroy_all
 Flat.destroy_all
-User.destroy_all
 
 p "creating users"
   user1 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
@@ -66,7 +65,6 @@ p "creating flats"
   flat8.user = user1
   flat8.remote_photo_url = url8
   flat8.save!
-
 p "flats - done"
 
 p "creating bookings"
@@ -78,3 +76,19 @@ p "creating bookings"
   booking3.save
 
 p "bookings - done"
+
+p "creating reviews"
+  review1 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat1, user: user1)
+  review2 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat2, user: user2)
+  review3 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat3, user: user3)
+  review4 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat4, user: user1)
+  review5 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat5, user: user2)
+  review6 = Review.new(content: Faker::HowIMetYourMother.quote, rating: Faker::Number.between(1, 5), flat: flat6, user: user3)
+  review1.save!
+  review2.save!
+  review3.save!
+  review4.save!
+  review5.save!
+  review6.save!
+
+p "reviews - done"

@@ -23,11 +23,27 @@
         <% 2.times do %>
         <p id="flat-description"><%= @flat.description %></p>
         <% end %>
-        <h3 class="text-center" id="reviews-show"><%= "Reviews" %></h3>
-        <p>No reviews for this property yet :(</p>
-        <h3 class="text-center" id="map-show"><%= "Map" %></h3>
+
+        <!-- REVIEWS HERE -->
+        <h3 class="text-center" id="reviews-show">Reviews</h3>
+        <% if @flat.reviews.empty? %>
+          <p class="comment">No reviews yet for this property :( ADD BUTTON TO CREATE REVIEW</p>
+        <% else %>
+          <div class="rating-avatar">
+            <div class="flexbox-comment">
+              <% @flat.reviews.each do |review| %>
+                <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show"><p>Lola</p>
+                <p class="fa fa-star rating"><%= review.rating %></p>
+                            </div>
+                <p class="comment">- "<%= review.content %>"</p>
+              <% end %>
+
+          </div>
+        <% end %>
 
         <!-- MAP HERE -->
+        <h3 class="text-center" id="map-show"><%= "Map" %></h3>
+
         <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markers.to_json %>"></div>
         <br>
         <br>
