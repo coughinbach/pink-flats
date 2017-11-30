@@ -22,7 +22,7 @@
       <div class="col-xs-8 col-xs-offset-2">
         <div class="card-container">
           <%@flats.each do |flat| %>
-          <div class="card" style="background-image: url(<%= cl_image_path flat.photo, height: 300, width: 400, class: "show-image" %>)">
+          <div class="card" id="flat-<%= flat.id %>" style="background-image: url(<%= cl_image_path flat.photo, height: 300, width: 400, class: "show-image" %>)">
             <a class="card-link" href="<%= flat_path(flat) %>"></a>
             <div class="card-banner">
               <div class="card-name">

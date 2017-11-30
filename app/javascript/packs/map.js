@@ -198,6 +198,8 @@ const styles = [
     }
 ];
 
+
+
 const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
@@ -216,10 +218,9 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   mapTypeId: 'map_style'
   });
   map.setStyle('map_style');
-}
+};
+// marker.addListener('click', function() {
+//   map.setZoom(8);
+//   map.setCenter(marker.getPosition());
 
-marker.addListener('click', function() {
-          map.setZoom(8);
-          map.setCenter(marker.getPosition());
-        });
 
