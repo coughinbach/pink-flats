@@ -3,7 +3,7 @@ class Flat < ApplicationRecord
   has_many :users, through: :bookings
   has_many :reviews, dependent: :destroy
   validates :address, presence: true
-  validates :rooms, presence: true
+  validates :guests, presence: true
   validates :description, presence: true
   validates :price, presence: true
   mount_uploader :photo, PhotoUploader
