@@ -74,5 +74,12 @@ p {
 }
 
 .log-in {
-  height: 61vh;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  h2 {
+    margin: 0;
+    padding: 20px 0px;
+  }
 }
