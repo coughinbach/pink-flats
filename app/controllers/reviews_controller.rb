@@ -18,9 +18,15 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     authorize @flat
     if @review.save
-      redirect_to flat_path(@flat)
+      respond_to do |format|
+        format.html { redirect_to flat_path(@flat) }
+        format.js
+      end
     else
-      render 'flats/show'
+      respond_to do |format|
+        format.html { render 'flats/show' }
+        format.js
+      end
     end
   end
 

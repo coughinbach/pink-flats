@@ -25,18 +25,21 @@
         <% end %>
 
         <!-- REVIEWS HERE -->
-        <h3 class="text-center" id="reviews-show">Reviews</h3>
+        <h3 class="text-center" id="reviews-show"><%= pluralize(@flat.reviews.count, 'review') %> for <%= @flat.name %></h3>
+        <br>
+        <div id="reviews" class="review-card-container">
           <% if @flat.reviews.empty? %>
             <p>No reviews yet for this property :(</p>
           <% else %>
+
             <% @flat.reviews.each do |review| %>
-              <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show"><p>Lola</p>
-              <p><%= review.rating %></p>
-              <p>-<%= review.content %></p>
+              <%= render 'reviews/show', review: review %>
             <% end %>
+
           <% end %>
+        </div>
         <h3 class="text-center" id="reviews-show">Add a review for <%= @flat.name %></h3>
-        <%= render 'reviews/form' %>
+        <%= render 'reviews/form', flat: @flat, review: @review %>
 
         <!-- MAP HERE -->
         <h3 class="text-center" id="map-show"><%= "Map" %></h3>
