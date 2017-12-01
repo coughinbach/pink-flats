@@ -31,7 +31,17 @@
 
 .button-new-flat {
   width: 300px;
+  background-color: #836A6A;
+  border: #836A6A;
+  border-radius: 2px;
 }
+
+.button-new-flat a:hover {
+  width: 300px;
+  background-color: green;
+  border: #836A6A;
+}
+
 .main-container {
   padding: 40px 0px 40px 0px;
 }
