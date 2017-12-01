@@ -25,25 +25,30 @@
         <% end %>
 
         <!-- REVIEWS HERE -->
-        <h3 class="text-center" id="reviews-show">Reviews</h3>
-        <% if @flat.reviews.empty? %>
-          <p class="comment">No reviews yet for this property :( ADD BUTTON TO CREATE REVIEW</p>
-        <% else %>
-          <div class="rating-avatar">
-            <div class="flexbox-comment">
-              <% @flat.reviews.each do |review| %>
-                <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show"><p>Lola</p>
-                <p class="fa fa-star rating"><%= review.rating %></p>
-                            </div>
-                <p class="comment">- "<%= review.content %>"</p>
-              <% end %>
+        <br>
+        <h3 class="text-center" id="reviews-show"><%= pluralize(@flat.reviews.count, 'review') %> for <%= @flat.name %></h3>
+        <br>
+        <div id="reviews" class="review-card-container">
+          <% if @flat.reviews.empty? %>
+            <p>No reviews yet for this property :(</p>
+          <% else %>
 
-          </div>
-        <% end %>
+            <% @flat.reviews.each do |review| %>
+              <%= render 'reviews/show', review: review %>
+            <% end %>
+
+          <% end %>
+        </div>
+        <br>
+        <h3 class="text-center" id="reviews-show">Add a review for <%= @flat.name %></h3>
+        <br>
+        <div class="review-form">
+          <%= render 'reviews/form', flat: @flat, review: @review %>
+        </div>
 
         <!-- MAP HERE -->
         <h3 class="text-center" id="map-show"><%= "Map" %></h3>
-
+        <br>
         <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markers.to_json %>"></div>
         <br>
         <br>
@@ -62,6 +67,7 @@
               <% end %>
           <%end %>
         </div>
+        <br>
       </div>
       <div class="col-md-3 col-md-offset-1" id="form-show">
         <h1 class="text-center"><%= @flat.price %>€ per night</h1>
