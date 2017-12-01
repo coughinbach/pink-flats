@@ -72,7 +72,7 @@
       <div class="col-md-3 col-md-offset-1" id="form-show">
         <h1 class="text-center"><%= @flat.price %>€ per night</h1>
         <% if policy(Booking).create? %>
-        <%#= render 'new_booking_form' %>
+        <%= render 'new_booking_form' %>
         <% end %>
       </div>
     </div>
