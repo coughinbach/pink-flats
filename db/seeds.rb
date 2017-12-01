@@ -17,13 +17,14 @@ p "creating users"
   user1 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
   user2 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
   user3 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+  userLola = User.create(email: lola@gmail.com, password: "password", first_name: "Lola", last_name: "Barbier")
 
 p "users - done"
 
 p "creating flats"
   url1 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1512041034/michael-d-beckwith-258305_kjckdx.jpg"
   flat1 = Flat.new(address: "105, rue des Dames - 75017 Paris", guests: "2", description: "Large room with garden view, wooden flooring, private toilet/shower, work table, closet, SatTV, AC/ heater, small locker, tea/coffee maker, free wifi. Located centrally just off main road has easy access to transport, restaurants, tourist spots. The room is part of a villa located in central part of Jaipur, has within one-two kilometer good restaurants, Fast food outlets, Post office, tourist office, major market, the old city of Jaipur, ATMs, etc. The room is on ground floor with bathguests ensuite and is suitable for two persons. Just a short walk brings you to the main city center with access to all kinds of transport and facilities.", price: 43, name: "Fairytale Castle")
-  flat1.user = user1
+  flat1.user = userLola
   flat1.remote_photo_url = url1
   flat1.save!
 
