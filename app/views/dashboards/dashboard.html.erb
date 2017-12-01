@@ -35,9 +35,9 @@
       <% @flats.each do |flat| %>
         <div class="col-sm-4">
           <div class="flats-card">
-            <h3> <%= flat.name %></h3>
+            <h3 id="booking-name"> <%= link_to flat.name, flat_path(flat) %></h3>
             <hr>
-            <p>Upcoming bookings: <%= @my_flat_bookings[0].count %></p>
+            <p># of Bookings: <%= @my_flat_bookings[0].count %></p>
             <% @my_flat_bookings[0].each do |flat_booking| %>
               <ul class="list-unstyled text-center">
                 <li class="booking-details"><strong>Booked by: <%= flat_booking.user.first_name%> <%= flat_booking.user.last_name%> </strong></li>
