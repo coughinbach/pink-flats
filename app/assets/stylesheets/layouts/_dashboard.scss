@@ -1,5 +1,14 @@
 h3 {
   margin: 8px;
+  a {
+    text-decoration: none;
+    color: #846868;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #846868;
+    opacity: 0.8;
+  }
 }
 
 h4 {
@@ -7,18 +16,26 @@ h4 {
 }
 hr {
   margin: 0px 10px 10px 10px;
+  border-top: 1px solid #846868;
+  opacity: 0.5;
 }
 
 ul {
   margin-top: 20px;
 }
 
+.dashboard {
+  min-height: calc(100vh - 160px)
+}
+
 .title-header {
   margin-left: 15px;
+  color: #846868;
 }
 .bookings-card {
   border: 1px dashed #F6B6B7;
   border-radius: 5px;
+  background-color: #fffbfb;
 }
 
 .booking-details {
@@ -32,10 +49,22 @@ ul {
 }
 
 #cancel-btn {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .flats-card {
   border: 1px dashed #F6B6B7;
   border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #fffbfb;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
 }
