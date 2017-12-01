@@ -1,0 +1,8 @@
+var newReviewForm = document.getElementById('new_review');
+<% if @review.persisted? %>
+  var reviews = document.getElementById('reviews');
+  reviews.insertAdjacentHTML("beforeend", "<%= j render 'reviews/show', review: @review %>");
+  newReviewForm.innerHTML = "<%= j render 'reviews/form', flat: @flat, review: Review.new %>";
+<% else %>
+  newReviewForm.innerHTML = "<%= j render 'reviews/form', flat: @flat, review: @review %>";
+<% end %>

@@ -1,0 +1,20 @@
+<div class="review-card">
+  <div class="review-left">
+    <div class="review-avatar">
+      <p><i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i></p>
+    </div>
+    <div class="review-name">
+      <p><%= review.user.first_name %></p>
+    </div>
+  </div>
+  <div class="review-right">
+    <div class="review-star">
+     <% review.rating.times do %>
+      <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+     <% end %>
+    </div>
+    <div class="review-content">
+      <p><%= review.content %></p>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,14 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
+  def accept?
+    record.flat.user == user
+  end
+
+  def decline?
+    record.flat.user == user
+  end
+
   class Scope < Scope
     def resolve
       scope.all
