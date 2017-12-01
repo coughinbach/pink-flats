@@ -17,6 +17,7 @@ p "creating users"
   user1 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
   user2 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
   user3 = User.create(email: Faker::Internet.email, password: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+  userLola = User.create(email: lola@gmail.com, password: "password", first_name: "Lola", last_name: "Barbier")
 
 p "users - done"
 
