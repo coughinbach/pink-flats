@@ -198,14 +198,17 @@ const styles = [
     }
 ];
 
-const test = function(){
-  console.log("hi");
-}
-
 const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
   const markers = JSON.parse(mapElement.dataset.markers);
+  
+  markers.forEach(function (marker) {
+      marker["click"] = function() {
+        window.location.href = ("https://pink-flats.herokuapp.com" + marker.url)
+      }
+    })
+
   map.addMarkers(markers)
   if (markers.length === 0) {
     map.setZoom(2);
@@ -215,24 +218,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   } else {
     map.fitLatLngBounds(markers);
   }
-  map.addStyle({
-  styles: styles,
-  mapTypeId: 'map_style'
-  });
-  map.setStyle('map_style');
-
-  markers[0].addListener('click', function(){
-    console.log("fuck this");
-  })
-
-  markers.forEach(function(marker) {
-    console.log(marker);
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        console.log("he")
-      }
-    })(marker, i));
-    })
+  
 };
 
 
