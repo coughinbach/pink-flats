@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: :contact
   resources :flats do
     resources :bookings, only: [ :create ]
+    resources :reviews, only: [ :create ]
   end
   resources :bookings, only: [ :destroy ]
   get 'dashboard', to: "dashboards#dashboard"

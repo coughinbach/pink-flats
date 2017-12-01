@@ -12,21 +12,16 @@ class ReviewsController < ApplicationController
   end
 
   def create
-      @reviews = Review.new(review_params)
+    @flat = Flat.find(params[:flat_id])
+    @review = Review.new(review_params)
+    @review.flat = @flat
+    @review.user = current_user
+    authorize @flat
     if @review.save
-      redirect_to review_path(@review)
+      redirect_to flat_path(@flat)
     else
-      render :new
+      render 'flats/show'
     end
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
   private

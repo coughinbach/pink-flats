@@ -26,20 +26,17 @@
 
         <!-- REVIEWS HERE -->
         <h3 class="text-center" id="reviews-show">Reviews</h3>
-        <% if @flat.reviews.empty? %>
-          <p class="comment">No reviews yet for this property :( ADD BUTTON TO CREATE REVIEW</p>
-        <% else %>
-          <div class="rating-avatar">
-            <div class="flexbox-comment">
-              <% @flat.reviews.each do |review| %>
-                <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show"><p>Lola</p>
-                <p class="fa fa-star rating"><%= review.rating %></p>
-                            </div>
-                <p class="comment">- "<%= review.content %>"</p>
-              <% end %>
-
-          </div>
-        <% end %>
+          <% if @flat.reviews.empty? %>
+            <p>No reviews yet for this property :(</p>
+          <% else %>
+            <% @flat.reviews.each do |review| %>
+              <img src="https://kitt.lewagon.com/placeholder/users/coughinbach" id="avatar-show"><p>Lola</p>
+              <p><%= review.rating %></p>
+              <p>-<%= review.content %></p>
+            <% end %>
+          <% end %>
+        <h3 class="text-center" id="reviews-show">Add a review for <%= @flat.name %></h3>
+        <%= render 'reviews/form' %>
 
         <!-- MAP HERE -->
         <h3 class="text-center" id="map-show"><%= "Map" %></h3>
@@ -66,7 +63,7 @@
       <div class="col-md-3 col-md-offset-1" id="form-show">
         <h1 class="text-center"><%= @flat.price %>€ per night</h1>
         <% if policy(Booking).create? %>
-        <%= render 'new_booking_form' %>
+        <%#= render 'new_booking_form' %>
         <% end %>
       </div>
     </div>
