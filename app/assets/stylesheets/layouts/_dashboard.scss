@@ -1,0 +1,41 @@
+h3 {
+  margin: 8px;
+}
+
+h4 {
+  margin: 8px;
+}
+hr {
+  margin: 0px 10px 10px 10px;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+.title-header {
+  margin-left: 15px;
+}
+.bookings-card {
+  border: 1px dashed #F6B6B7;
+  border-radius: 5px;
+}
+
+.booking-details {
+  line-height: 20px;
+}
+
+.bookings-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cancel-btn {
+  margin-top: 20px;
+}
+
+.flats-card {
+  border: 1px dashed #F6B6B7;
+  border-radius: 5px;
+}
