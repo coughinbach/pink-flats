@@ -47,7 +47,7 @@ p "creating flats"
 
   url5 = "http://res.cloudinary.com/dp7vcrxlv/image/upload/v1511964632/flat-6_ybwsv0.jpg"
   flat5 = Flat.new(address: "139, rue de Rennes - 75006 Paris", guests: "2", description: "A bright & spacious loft, featuring an exterior rooftop patio & BBQ, perfect for enjoying the sunny days of summer outside. This unique space is great for lovers who want to spend a hoy & quality stay at the center of everything. Our building has a lot of character. It's a typical plateau home built in the late 1800's and the loft feels SPACIOUS, the ceilings are very high and it has a lot of natural light because of the SKY LIGHTS. The place features lots of ORIGINAL ARTWORK and we have recently installed AIR CONDITIONING in the unit to keep you cool during the warmer summer days.", price: 98, name: "Cozy Chalet")
-  flat5.user = user1
+  flat5.user = userLola
   flat5.remote_photo_url = url5
   flat5.save!
 
@@ -81,12 +81,12 @@ p "creating bookings"
 p "bookings - done"
 
 p "creating reviews"
-  review1 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat1, user: user1)
-  review2 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat2, user: user2)
-  review3 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat3, user: user3)
-  review4 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat4, user: user1)
+  review1 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat7, user: user1)
+  review2 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat7, user: user2)
+  review3 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat7, user: user3)
+  review4 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat5, user: user1)
   review5 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat5, user: user2)
-  review6 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat6, user: user3)
+  review6 = Review.new(content: Faker::Simpsons.quote, rating: Faker::Number.between(1, 5), flat: flat5, user: user3)
   review1.save!
   review2.save!
   review3.save!
