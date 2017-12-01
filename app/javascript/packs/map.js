@@ -198,7 +198,9 @@ const styles = [
     }
 ];
 
-
+const test = function(){
+  console.log("hi");
+}
 
 const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
@@ -218,9 +220,20 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   mapTypeId: 'map_style'
   });
   map.setStyle('map_style');
+
+  markers[0].addListener('click', function(){
+    console.log("fuck this");
+  })
+
+  markers.forEach(function(marker) {
+    console.log(marker);
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        console.log("he")
+      }
+    })(marker, i));
+    })
 };
-// marker.addListener('click', function() {
-//   map.setZoom(8);
-//   map.setCenter(marker.getPosition());
+
 
 
