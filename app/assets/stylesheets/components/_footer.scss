@@ -2,8 +2,8 @@
   background: #f4bcbc;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
+  justify-content: space-around;
+  height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
@@ -19,6 +19,7 @@
   padding: 0px 10px;
   font-size: 16px;
 }
+
 .footer-links a:hover {
   opacity: 1;
 }
@@ -26,7 +27,7 @@
 .contact-links {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: horizontal;
 }
 
 .contact-links a {
@@ -34,19 +35,31 @@
   color: white;
   opacity:0.8;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: lighter;
 }
+
 .contact-links a:hover {
   opacity: 1;
 }
 
-.fa-key {
-  color: white;
-}
 .footer-copyright {
   background: #f4bcbc;
   font-size: 14px;
   color: rgba(255,255,255,0.5);
   text-align: center;
   font-family: helvetica;
+}
+
+#contact-button {
+  padding: 5px;
+}
+
+#social-icons {
+  padding: 5px;
+  color: white;
+  opacity: 0.8;
+}
+
+#social-icons a:hover {
+  opacity: 1;
 }
