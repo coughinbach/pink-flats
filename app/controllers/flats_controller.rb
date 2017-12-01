@@ -12,7 +12,7 @@ class FlatsController < ApplicationController
       {
         lat: flat.latitude,
         lng: flat.longitude,
-        url: "/flats/flat-#{flat.id}"
+        url: "/flats#flat-#{flat.id}"
       }
     end
   end
