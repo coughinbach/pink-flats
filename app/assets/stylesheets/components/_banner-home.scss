@@ -1,7 +1,7 @@
 .banner-home {
   color: #fff;
   text-align: center;
-  height: 85vh;
+  height: 100vh;
   width: 100%;
   margin-top: -60px;
   background-size: cover;
@@ -30,3 +30,10 @@
   }
 }
 
+.banner-home-content {
+  margin-bottom: 70px;
+}
+
+.home-description {
+  text-align: justify;
+}

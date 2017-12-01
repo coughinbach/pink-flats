@@ -1,13 +1,12 @@
 <div class="footer">
-  <div class="footer-links">
-    <i class="fa fa-key fa-2x" aria-hidden="true"></i>
-    <p>&nbsp;was made with</p>
-    <a href="#"><i class="fa fa-github fa-2x"></i></a>
-    <p>@ le</p>
-    <a href="#"><i class="fa fa-train fa-2x"></i></a>
-  </div>
-  <div class="contact-links">
-    <%= link_to "Contact", contact_path %>
-    <%= link_to "About us", contact_path %>
+  <div class="contact-links text-align">
+    <div id="contact-button"><%= link_to "Contact |", contact_path %></div>
+    <div id="about-button"><%= link_to " About |", about_path %></div>
+    <div id="social-icons">
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
+      <a href="https://www.twitter.com"><i class="fa fa-twitter fa-lg"></i></a>
+      <a href="https://www.instagram.com"><i class="fa fa-instagram fa-lg"></i></a>
+      <a href="https://github.com/adrienmoison"><i class="fa fa-github fa-lg"></i></a>
+    </div>
   </div>
 </div>
