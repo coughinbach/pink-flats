@@ -20,8 +20,7 @@
             <% end %>
             <ul class="list-unstyled text-center">
               <li class="booking-details"><strong># of nights:</strong> <%= booking.nights %></li>
-              <li class="booking-details"><strong>Start:</strong> <%= booking.start_date.strftime("%d-%m-%Y")  %></li>
-              <li class="booking-details"><strong>End:</strong> <%= booking.end_date %></li>
+              <li class="booking-details"><strong>Dates:</strong> <%= booking.start_date.strftime("%d/%m/%Y")  %> to  <%= booking.end_date.strftime("%d/%m/%Y") %></li>
               <li class="booking-details"><strong># of guests:</strong> <%= booking.guests %></li>
             <ul>
             <%= link_to "Cancel booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"}, class:"btn btn-show btn-xs text-center", id:"cancel-btn" %>
@@ -42,8 +41,7 @@
               <ul class="list-unstyled text-center">
                 <li class="booking-details"><strong>Booked by: <%= flat_booking.user.first_name%> <%= flat_booking.user.last_name%> </strong></li>
                 <li class="booking-details"># of nights: <%= flat_booking.nights%></li>
-                <li class="booking-details">Start date: <%= flat_booking.start_date%></li>
-                <li class="booking-details">End date: <%= flat_booking.end_date %></li>
+                <li class="booking-details">Dates: <%= flat_booking.start_date.strftime("%d/%m/%Y")%> to <%= flat_booking.end_date.strftime("%d/%m/%Y") %></li>
                 <li class="booking-details">Guests: <%= flat_booking.guests %></li>
                 <%if flat_booking.status == "Pending"  %>
                   <li class="booking-details">Status: <%= flat_booking.status %></li>
