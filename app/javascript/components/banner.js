@@ -2,7 +2,7 @@ import Typed from 'typed.js';
 
 function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
-    strings: ["Let's get away this week-end", "Dear, let's enjoy our love"],
+    strings: ["Dear, let's enjoy our love", "Let's get away this week-end"],
     typeSpeed: 80,
     loop: true
   });
