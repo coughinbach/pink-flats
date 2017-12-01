@@ -25,6 +25,7 @@
         <% end %>
 
         <!-- REVIEWS HERE -->
+        <br>
         <h3 class="text-center" id="reviews-show"><%= pluralize(@flat.reviews.count, 'review') %> for <%= @flat.name %></h3>
         <br>
         <div id="reviews" class="review-card-container">
@@ -38,12 +39,16 @@
 
           <% end %>
         </div>
+        <br>
         <h3 class="text-center" id="reviews-show">Add a review for <%= @flat.name %></h3>
-        <%= render 'reviews/form', flat: @flat, review: @review %>
+        <br>
+        <div class="review-form">
+          <%= render 'reviews/form', flat: @flat, review: @review %>
+        </div>
 
         <!-- MAP HERE -->
         <h3 class="text-center" id="map-show"><%= "Map" %></h3>
-
+        <br>
         <div id="map" style="width: 100%; height: 400px;" data-markers="<%= @markers.to_json %>"></div>
         <br>
         <br>
@@ -62,6 +67,7 @@
               <% end %>
           <%end %>
         </div>
+        <br>
       </div>
       <div class="col-md-3 col-md-offset-1" id="form-show">
         <h1 class="text-center"><%= @flat.price %>€ per night</h1>
