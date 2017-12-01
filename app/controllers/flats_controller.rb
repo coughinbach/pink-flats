@@ -9,7 +9,11 @@ class FlatsController < ApplicationController
       @flats = policy_scope(Flat).order(created_at: :desc)
     end
     @markers = @flats.map do |flat|
-      { lat: flat.latitude, lng: flat.longitude }
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+        url: "/flats#flat-#{flat.id}"
+      }
     end
   end
 
