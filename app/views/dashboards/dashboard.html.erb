@@ -1,8 +1,13 @@
-<div class="container">
-  <div class="dashboard">
+<div class="dashboard">
+  <div class="container">
     <h1 class="text-center">My Dashboard</h1>
     <div class="row">
       <h2 class="title-header">My bookings</h2>
+      <%if @bookings == [] %>
+        <br>
+        <p class="text-center"><strong>You haven't booked anything...yet!</strong></p>
+        <br>
+      <% end %>
       <% @bookings.each do |booking| %>
         <div class="col-sm-4">
           <div class="bookings-card">
@@ -31,6 +36,11 @@
 
     <div class="row">
       <h2 class="title-header">My flats</h2>
+      <%if @flats == [] %>
+        <br>
+        <p class="text-center"><strong>You have no flats on Pink Flats...yet !</strong></p>
+        <br>
+      <% end %>
       <% @flats.each do |flat| %>
         <div class="col-sm-4">
           <div class="flats-card">
